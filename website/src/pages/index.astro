@@ -1,16 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+// components
 import Header from '../components/page/Header.astro';
+import LeftSidebar from '../components/UI/LeftSidebar.astro'
+import RightSidebar from '../components/UI/RightSidebar.astro';
+import PageContent from '../components/page/Main.astro'
 ---
 
 <Layout>
-
     <!-- wordmark/title -->
-    <div class="flex flex-col w-full justify-center p-2">
-        <div class="w-100">
-            <Header />
+    <div class="flex flex-col w-full h-full justify-center p-2 gap-2">
+        <Header />
+
+        <!-- PAGE -->
+        <div class="flex-1 flex flex-row">
+            <LeftSidebar />
+            <div class="flex-1">
+                <PageContent />
+            </div>
+            <RightSidebar />
         </div>
     </div>
-    
 </Layout>

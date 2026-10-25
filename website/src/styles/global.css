@@ -2,6 +2,7 @@
 
 @theme {
     --font-ui: ui-monospace;
+    --radius-ui: 8px;
 }
 
 @layer base {

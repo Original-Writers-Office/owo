@@ -1,9 +1,26 @@
 ---
-import Landing from './Landing.astro'
+import Landing from "./Landing.astro";
+import { Icon } from "astro-icon/components";
+
+// components
+import Search from "../UI/Search.svelte";
 ---
 
-<main class="w-full flex items-center p-2">
+<main class="w-full flex items-center border-b py-2">
     <div class="w-100">
         <Landing />
+    </div>
+    <div class="ml-auto flex gap-2">
+        <div class="flex gap-2">
+            <a title="Create" class="text-2xl p-2 bg-black/7 rounded-ui">
+                <Icon name="mdi:fountain-pen-tip" />
+            </a>
+            <a title="Profile" class="text-2xl p-2 bg-black/7 rounded-ui">
+                <Icon name="mdi:account" />
+            </a>
+        </div>
+        <div>
+            <Search />
+        </div>
     </div>
 </main>
